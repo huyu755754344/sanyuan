@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -33,6 +30,12 @@
 				margin-left: 60px;
 				line-height: 100px;
 			}
+			.header-cont .header-box a {
+				text-decoration:underline;
+				cursor: pointer;
+				color: #222;
+				float: right;
+			}
 			.header-cont .header-bar{
 				width: 1200px;
 				margin: 28px auto 0;
@@ -56,7 +59,7 @@
 				height: 28px;
 			}
 			.active{
-			background: red;
+				background: red;
 			}
 			
 		</style>
@@ -65,6 +68,8 @@
 		<div class="header-cont">
 			<div class="header-box">
 				<img src="/img/zu9.png" >
+				<a href="javascript:;">登录</a>
+				<a href="javascript:;">注册</a>
 				<!-- <div id="district" data-toggle="distpicker">
 					省：<select name="userProvince"></select>
 					市：<select name="userCity"></select>

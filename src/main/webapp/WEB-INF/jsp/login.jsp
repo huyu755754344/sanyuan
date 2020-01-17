@@ -26,7 +26,7 @@
 							</div>
 							<div class="">
 								<input type="password" name="password" id="password" value="" placeholder="请输入密码" autocomplete="new-password" />
-								<span id="vft-b" style=""></span>
+								<span id="vft-b"></span>
 							</div>
 							<a class="login-btn" href="javascript:;">登录</a>
 							<a class="login-rgst" href="/toRegister">注册</a>
