@@ -244,4 +244,11 @@ public class CarServiceImpl implements CarService{
 		
 		return carMapper.deleteByPrimaryKey(carId);
 	}
+
+	@Override
+	public String findPhoneByCarId(Integer carId) {
+		
+		
+		return carMapper.selectPhoneByCarId(carId);
+	}
 }

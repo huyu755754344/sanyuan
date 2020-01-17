@@ -585,4 +585,8 @@
       status = #{status,jdbcType=INTEGER}
     where car_id = #{carId,jdbcType=INTEGER}
   </update>
+  <select id="selectPhoneByCarId" resultType="String">
+  select u.phone from car c left join sanyuan_user u on c.user_num=u.user_num where c.car_id=#{carId};
+  
+  </select>
 </mapper>

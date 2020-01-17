@@ -183,10 +183,10 @@
     where order_id = #{orderId,jdbcType=BIGINT}
   </update>
   <select id="chackOrderByUserIdCarIdOK" resultMap="BaseResultMap">
-  select * from sanyuan_order where car_id=#{carId} and user_id= #{userId} and status=1;
+  select * from sanyuan_order where car_id=#{carId} and user_num=#{userNum} and status=2;
   </select>
   <select id="findOrderByUserIdCarIdING" resultMap="BaseResultMap">
-  select * from sanyuan_order where car_id=#{carId} and user_id =#{userId} and status=0;
+  select * from sanyuan_order where car_id=#{carId} and user_num =#{userNum} and status=1;
   </select>
   
 </mapper>

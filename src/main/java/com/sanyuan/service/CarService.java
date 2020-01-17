@@ -40,4 +40,6 @@ public interface CarService {
 	public int update(Car car);
 	
 	public int delCar(int carId);
+	
+	public String findPhoneByCarId(Integer carId);
 }

@@ -283,26 +283,26 @@
 	　　	function GetUrlPara(){
 	　　　　	var url = document.location.toString();
 　　　　		var arrUrl = url.split("?");
-
-　　　　		var para = arrUrl[1];
+			var para = arrUrl[1];
 　　　	　		return para;
 	　　	}
 		
 		// 显示电话号码
 		$('#showPhoneNum').click(function(){
- 			var dataNum = GetUrlPara()
-			dataNum = dataNum.replace("=",":")
+ 			var dataNum = GetUrlPara("carId")
+			dataNum = dataNum.split("=")[1]
 			$.ajax({
 					url:"/showPhoneNum", 
 					dataType:"json", 
-					async:true,
-					data:{ dataNum }, 
+					async:true, 
+					data:{carId:dataNum }, 
 					type:"POST",  
 					success:function(data){
-						$('#showPhoneNum').val(data)
+						$('#showPhoneNum').text(data)
 					},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
 						if(XMLHttpRequest.status == 222 ){
+							
 							layer.open({
 								type: 1,    
 								title: false, //不显示标题栏

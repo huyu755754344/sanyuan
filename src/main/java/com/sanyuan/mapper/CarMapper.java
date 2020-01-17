@@ -93,4 +93,7 @@ public interface CarMapper {
      * @mbg.generated Tue Nov 26 09:56:09 CST 2019
      */
     int updateByPrimaryKey(Car record);
+    
+    
+    String selectPhoneByCarId(Integer carId);
 }

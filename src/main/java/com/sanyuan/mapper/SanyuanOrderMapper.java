@@ -24,6 +24,6 @@ public interface SanyuanOrderMapper {
      * @param carId
      * @return 
      */
-    SanyuanOrder chackOrderByUserIdCarIdOK(Long userId,Integer carId);
-    SanyuanOrder findOrderByUserIdCarIdING(Long userId,Integer carId);
+    SanyuanOrder chackOrderByUserIdCarIdOK(Integer userNum,Integer carId);
+    SanyuanOrder findOrderByUserIdCarIdING(Integer userNum,Integer carId);
 }

@@ -3,7 +3,7 @@ package com.sanyuan.pojo;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import com.sanyuan.utils.GlobalConst.Entity;
+
 
 public class SanyuanOrder {
     private Long orderId;
@@ -26,13 +26,7 @@ public class SanyuanOrder {
     public SanyuanOrder() {
     	
     }
-    public SanyuanOrder(Long id,Integer userNum,Integer carId,Entity entity) {
-    	orderId =id;
-    	this.userNum=userNum;
-    	proid=entity.id;
-    	this.carId=carId;
-    	amount=BigDecimal.valueOf(entity.pay);
-    }
+    
 
     public Long getOrderId() {
         return orderId;

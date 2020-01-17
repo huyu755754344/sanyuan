@@ -26,6 +26,7 @@ import com.sanyuan.pojo.CarPicture;
 import com.sanyuan.pojo.CarSeries;
 import com.sanyuan.pojo.HeaderName;
 import com.sanyuan.pojo.Result;
+import com.sanyuan.pojo.SanyuanOrder;
 import com.sanyuan.pojo.SanyuanUser;
 import com.sanyuan.pojo.YiyuanUser;
 import com.sanyuan.service.CarService;
@@ -53,6 +54,11 @@ public class CarController {
 		return view;
 	}
 	
+	@RequestMapping("/showPhoneNum")
+	public String showPhoneNum(Integer carId){
+		
+		return carService.findPhoneByCarId(carId);
+	}
 	
 	  @RequestMapping("/getBrand") 
 	  public Result getBrand(@RequestParam(defaultValue = "")String brandShouzimu) {
@@ -194,4 +200,5 @@ public class CarController {
 		}
 		return null;
 	}
+	
 }
