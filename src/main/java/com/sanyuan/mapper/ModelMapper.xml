@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sanyuan.mapper.ModelMapper">
+	<resultMap type="com.sanyuan.pojo.CarModel" id="ModelResultMap">
+	  	<result column="modelName" jdbcType="VARCHAR" property="modelName"/>
+	  	<result column="modelId" jdbcType="VARCHAR" property="modelId"/>
+	 </resultMap>
+	  
+	<select id="checkModel" parameterType="com.sanyuan.pojo.CarModel" resultMap="ModelResultMap">
+		select config_chexingmingcheng modelName,config_chexing_id modelId from car_config where 
+		brand_pinpai_id=#{brandId,jdbcType=VARCHAR} and series_chexi_id=#{seriesId,jdbcType=VARCHAR};
+	</select>
+</mapper>

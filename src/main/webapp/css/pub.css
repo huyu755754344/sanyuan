@@ -1,0 +1,104 @@
+body{
+	margin: 0;
+}
+.header-iframe{
+	border: none;
+	padding: 0;
+}
+.banner{
+	height: 370px;
+	max-width: 1920px;
+	min-width: 1200px;
+	background: url(../img/banner.png);
+	background-size: cover;
+	margin: 0 auto;
+	background-position: center 0; 
+} 
+.pub-contain{
+	width: 100%;
+	max-width: 1920px;
+	min-width: 1200px;
+	background: #f2f2f2;
+	margin: 0 auto;
+}
+.pub-cont{
+	width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.pub-cont .mallbar{
+	width: 315px;
+	height: 2200px;
+	padding: 0;
+	border: none;
+	float: right;
+	right: 0;
+}
+.pub-cont .pub-box{
+	float: left;
+	left: 0;
+	width: 875px;
+}
+.pub-cont .pub-box .pub-tit{
+	width: 687px;
+	height: 238px;
+	background: #fff;
+	margin: 20px auto;
+}
+.pub-cont .pub-box .pub-topimg{
+	width:867px;
+	height:107px;
+	background: url(../img/zu12.png);
+}
+.pub-cont .pub-box .pub-detail{
+	width: 867px;
+	background: #fff;
+	margin-top: 20px;
+}
+.pub-detail .pub-car-box{
+	border-bottom: 1px solid #D8D8D8;
+	width: 867px;
+	line-height: 120px;
+	overflow: hidden;
+}
+.pub-detail .pub-car-box .pub-car{
+	width: 80%;
+	float: left;
+	text-align: center;
+}
+.pub-detail .pub-car-box .pub-car span{
+	margin-left: 40px;
+	color: #333333;
+	font-weight: 500;
+}
+.pub-detail .pub-car-box .pub-btn{
+	width: 20%;
+	float: left;
+	display: flex;
+	align-items: center;
+	padding-top: 20px;
+}
+.pub-btn .qwe{
+	width: 1px;
+	line-height: 80px;
+	float: left;
+	background: #D8D8D8;
+}
+.pub-btn .btn-state{
+	float: left;
+	margin-left: 15px;
+	width: 60px;
+	text-align: center;
+	line-height: 36px;
+	border-radius: 3px;
+	color: #fff;
+}
+.pub-btn .btn-change{
+	display: block;
+	text-decoration: none;
+	background: rgba(48,132,210,1);
+}
+.pub-btn .btn-del{
+	cursor: pointer;
+	background:rgba(215,57,55,1);
+}
