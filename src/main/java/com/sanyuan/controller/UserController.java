@@ -67,7 +67,11 @@ public class UserController {
 		ModelAndView view = new ModelAndView("redirect:http://192.168.1.188:84/toLogin");
 		return view;
 	}
-	
+	@RequestMapping("login")
+	public void login() {
+		CloseableHttpClient client = HttpClientBuilder.create().build();
+		
+	}
 	
 //	@RequestMapping("/toLogin")
 //	public ModelAndView toLogin(HttpServletRequest request) {
