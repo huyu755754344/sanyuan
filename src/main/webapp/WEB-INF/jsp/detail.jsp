@@ -14,14 +14,19 @@
 				width: 100%;
 				height: 100%;
 				background-image: url('/img/wx-apply.png');
+				background-size: 100%;
+				background-repeat: no-repeat;
 			}
 			.layerShow {
-				width: 233px;
-				height: 233px;
-				background-color: pink;
+				width: 256px;
+				height: 256px;
 				position: absolute;
-				top: 201px;
+				top: 212px;
 				left: 40px;
+			}
+			.sanyuanQRcode{
+				width: 100%;
+				height: 100%;
 			}
 		</style>
 	</head>
@@ -257,6 +262,7 @@
 	<script src="/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/css/layer/layer.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/js/swiper.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery.qrcode.min.js"></script>
 	<script type="text/javascript">
 		var galleryTop = new Swiper('.gallery-top', {
 			nextButton: '.swiper-button-next',
@@ -298,20 +304,24 @@
 					data:{carId:dataNum }, 
 					type:"POST",  
 					success:function(data){
+						console.log(data)
 						$('#showPhoneNum').text(data)
 					},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
-						if(XMLHttpRequest.status == 222 ){
-							
+						var payUrl=XMLHttpRequest.responseText;
+						// if(XMLHttpRequest.status == 222 ){
 							layer.open({
 								type: 1,    
 								title: false, //不显示标题栏
-								area: ['315px', '460px'],  // 设置宽高
+								area: ['338px', '483px'],  // 设置宽高
 								content: '<div class="layerBox">'
-									+'<div class="layerShow"></div>'
-									+'</div>'
+									+'<div class="layerShow"><div id="sanyuanQRcode" class="sanyuanQRcode"></div></div>'
+									+'</div>',
+								success:function(){
+									jQuery('#sanyuanQRcode').qrcode(payUrl);
+								}
 							});
-						}
+						// }
 	                }
 				});
 		})
