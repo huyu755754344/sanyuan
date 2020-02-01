@@ -65,6 +65,7 @@ public class WXPayService {
         data.put("notify_url", config.getNotifyUrl());
         data.put("trade_type", config.getTradeType());
         data.put("product_id", applyNo);
+        
         System.out.println(String.valueOf(money * 100));
         // data.put("time_expire", "20170112104120");
         try {

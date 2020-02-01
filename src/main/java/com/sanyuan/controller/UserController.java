@@ -64,14 +64,26 @@ public class UserController {
 
 	@RequestMapping("/toLogin")
 	public ModelAndView toLogin(HttpServletRequest request,HttpServletResponse response) {
-		ModelAndView view = new ModelAndView("redirect:http://192.168.1.188:84/toLogin");
+		
+		ModelAndView view = new ModelAndView("redirect:https://yiyuan.hunlian.art/toLogin?url=xn--ehq91f.hunlian.art");
+		
 		return view;
 	}
-	@RequestMapping("login")
-	public void login() {
-		CloseableHttpClient client = HttpClientBuilder.create().build();
-		
-	}
+//	@RequestMapping("toLogin")
+//	public void login(HttpServletRequest request) {
+//		CloseableHttpClient client = HttpClientBuilder.create().build();
+//		HttpPost post = new HttpPost();
+//		post.setHeader("url", request.getRequestURL().toString());
+//		try {
+//			client.execute(post);
+//		} catch (ClientProtocolException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 	
 //	@RequestMapping("/toLogin")
 //	public ModelAndView toLogin(HttpServletRequest request) {

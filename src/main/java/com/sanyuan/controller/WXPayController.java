@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSON;
 import com.github.wxpay.sdk.WXPayUtil;
@@ -19,11 +20,18 @@ import com.sanyuan.utils.GlobalConst;
 import com.sanyuan.utils.JsonUtils;
 import com.sanyuan.utils.StringUtils;
 
-
+@RestController
 public class WXPayController {
 	
 	@Autowired
 	private SanyuanOrderMapper orderMapper;
+	
+	
+	@RequestMapping("/upOrder")
+	public void upOrder(@RequestParam("orderId")Long orderId) {
+		System.out.println("收到请求"+orderId);
+		 orderMapper.updateByKey(orderId);
+	}
 	
 	
 	/**
@@ -86,16 +94,11 @@ public class WXPayController {
 	              Long orderId = Long.parseLong(returnPay.getOut_trade_no());
 	              //完成交易
 	              //更新订单情况
-	              SanyuanOrder order= new SanyuanOrder();
-	              order.setOrderId(orderId);
-	              Byte a = 2;
-	              order.setStatus(a);
-	              orderMapper.updateByPrimaryKey(order);
+	              System.out.println("更新订单+"+orderId);
+	             orderMapper.updateByKey(orderId);
+	              
 	             //判断订单是否是 vip订单
-	            
-	             
 	             //略
-	             
 	             //   addServiceCount(returnPay,response); // 写你支付成功后的业务, 比如给用户充值服务次数
 	          }
 	          // 返回false的原因有可能是：订单已完成支付,或者订单已退款

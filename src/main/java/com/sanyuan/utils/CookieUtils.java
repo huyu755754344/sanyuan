@@ -146,7 +146,7 @@ public final class CookieUtils {
                 //cookie.setDomain(getDomainName(request));		引发无法设置cookie
             cookie.setPath("/");
             //cookie.setMaxAge(60*60);
-            cookie.setDomain("hunlian.art");
+            cookie.setDomain(".hunlian.art");
             cookie.setHttpOnly(true);
             response.addCookie(cookie);
         } catch (Exception e) {

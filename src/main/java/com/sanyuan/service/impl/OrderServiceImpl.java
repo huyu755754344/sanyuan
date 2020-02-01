@@ -35,9 +35,7 @@ public class OrderServiceImpl implements OrderService {
 					return true;
 				}
 				return false;
-				//1）没有或失败  -- 生成订单 发起交易
 				
-				//2) 有正在支付的订单 --获取订单号 发起交易
 					
 	}
 
@@ -48,6 +46,7 @@ public class OrderServiceImpl implements OrderService {
 		Long orderId = null;
 		if(order!=null&&order.getStatus()==1) {
 			orderId= order.getOrderId();
+			System.out.println("已存在订单"+orderId);
 		}else {
 			//生成新订单
 			orderId = CreateIdUtils.getId();
@@ -63,9 +62,9 @@ public class OrderServiceImpl implements OrderService {
 		}	
 		try {
 			order = orderMapper.selectByPrimaryKey(orderId);
-			
+			System.out.println("订单信息"+order);
 			WXPayService x = WXPayService.getInstance(GlobalConst.CERTPATH, GlobalConst.NOTIFYURL);
-			String url = x.doUnifiedOrder(order.getOrderId().toString(), "服务", order.getAmount().doubleValue(), order.getProid().toString());
+			String url = x.doUnifiedOrder(order.getOrderId().toString(), "服务", order.getAmount().doubleValue(), order.getProid().toString(),"sanyuan");
 			return url;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

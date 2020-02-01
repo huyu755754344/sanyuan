@@ -188,5 +188,7 @@
   <select id="findOrderByUserIdCarIdING" resultMap="BaseResultMap">
   select * from sanyuan_order where car_id=#{carId} and user_num =#{userNum} and status=1;
   </select>
-  
+  <update id="updateByKey">
+  UPDATE `sanyuan`.`sanyuan_order` SET `status` = '2' WHERE (`order_id` = #{orderId});
+  </update>
 </mapper>

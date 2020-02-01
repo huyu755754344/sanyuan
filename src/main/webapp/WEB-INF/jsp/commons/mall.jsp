@@ -27,14 +27,15 @@
 			</div>
 			
 			<ul>
-				<li>三元汽车</li>
-				<li>一元招聘</li>
-				<li>婚恋商城</li>
+				<li onclick="window.location.href='//三元.hunlian.art';">三元汽车</li>
+				<li onclick="window.location.href='//yiyuan.hunlian.art';">一元招聘</li>
+				<li onclick="window.location.href='//www.hunlian.art';">婚恋商城</li>
 				<li>服装鞋袜</li>
 				<li>5</li>
 				<li>6</li>
 				<li>7</li>
 				<li>8</li>
+				
 			</ul>
 			<div class="mallkh">
 				 各位先生，女士们，大家好，欢迎进入我公司的商城板块，我是一个做实事的人，本公司的商品将会以最低廉的价格，最优质的服务，为广大消费者带去实实在在的优惠，

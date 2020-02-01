@@ -99,4 +99,12 @@ public class SanyuanOrder {
     public void setRemarks(String remarks) {
         this.remarks = remarks == null ? null : remarks.trim();
     }
+
+
+	@Override
+	public String toString() {
+		return "SanyuanOrder [orderId=" + orderId + ", userNum=" + userNum + ", carId=" + carId + ", proid=" + proid
+				+ ", status=" + status + ", createTime=" + createTime + ", updateTime=" + updateTime + ", amount="
+				+ amount + ", remarks=" + remarks + "]";
+	}
 }

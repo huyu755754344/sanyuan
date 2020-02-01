@@ -26,4 +26,5 @@ public interface SanyuanOrderMapper {
      */
     SanyuanOrder chackOrderByUserIdCarIdOK(Integer userNum,Integer carId);
     SanyuanOrder findOrderByUserIdCarIdING(Integer userNum,Integer carId);
+    int updateByKey(Long orderId);
 }

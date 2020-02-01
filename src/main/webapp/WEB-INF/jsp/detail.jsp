@@ -313,7 +313,7 @@
 							layer.open({
 								type: 1,    
 								title: false, //不显示标题栏
-								area: ['338px', '483px'],  // 设置宽高
+								area: ['270px', '380px'],  // 设置宽高
 								content: '<div class="layerBox">'
 									+'<div class="layerShow"><div id="sanyuanQRcode" class="sanyuanQRcode"></div></div>'
 									+'</div>',

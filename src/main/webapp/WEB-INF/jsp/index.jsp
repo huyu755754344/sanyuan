@@ -8,6 +8,7 @@
 		<meta charset="utf-8">
 		<title>首页</title>
 		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+		
 		<style>
 			.home-tit span {
 				display: block;
@@ -96,9 +97,9 @@
 		</div>
 		<jsp:include page="commons/bottom.jsp"></jsp:include>
 	</body>
+	<script src="/js/music.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 	$(".rec-allcar div").eq(2)
 	$(".rec-allcar").children().eq(14).append("<div class='home-bottomimg'></div>")
-	
 	</script>
 </html>
