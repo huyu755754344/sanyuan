@@ -8,26 +8,11 @@
 		<title>${car.brand.brandPinpai} ${car.series.seriesChexi} ${car.config.configPailiangL }L ${car.config.configBiansuxiang }</title>
 		<link rel="stylesheet" type="text/css" href="/css/detail.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/swiper.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="/css/detaillayer.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/laye/theme/default/layer.css"/>
 		<style>
-			.layerBox {
-				width: 100%;
-				height: 100%;
-				background-image: url('/img/wx-apply.png');
-				background-size: 100%;
-				background-repeat: no-repeat;
-			}
-			.layerShow {
-				width: 256px;
-				height: 256px;
-				position: absolute;
-				top: 212px;
-				left: 40px;
-			}
-			.sanyuanQRcode{
-				width: 100%;
-				height: 100%;
-			}
+		
 		</style>
 	</head>
 	<body>
